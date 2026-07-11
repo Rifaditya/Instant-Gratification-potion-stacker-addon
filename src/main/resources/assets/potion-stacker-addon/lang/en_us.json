@@ -1,0 +1,11 @@
+{
+  "config.potion-stacker-addon.title": "Potion Stacker Addon",
+  "config.potion-stacker-addon.category.general": "General Settings",
+  "config.potion-stacker-addon.group.categories": "Potion Stacking Configuration",
+  "config.potion-stacker-addon.option.potion_limit": "Potion Limit",
+  "config.potion-stacker-addon.option.potion_limit.description": "Limit for items that are potions, splash potions, lingering potions, and water bottles. Default: 16. (Recommended: 39,768,215 or lower to prevent container overflows.)\n\n§6Notice:§r Global configuration settings only define default values for newly generated worlds. For existing worlds, change settings in-game via /gamerule or the GameRules edit GUI screen.",
+  "config.potion-stacker-addon.option.warning": "⚠️ WARNING: Do you really want to set the value to %d? Large stack counts (millions/billions) can cause game lag/stutter when moving or sorting items! Additionally, setting values above 39,768,215 is highly likely to cause Large Chest total counts to overflow the 2.14 billion integer limit and delete your items! 39,768,215 or lower is strongly recommended. Change it at your own risk!",
+  "gamerule.category.potion-stacker-addon.potion-stacker-addon": "Potion Stacker Addon",
+  "gamerule.potion-stacker-addon.potion_limit": "Potion Limit",
+  "gamerule.potion-stacker-addon.potion_limit.description": "Maximum stack size for potions. WARNING: Keep under 39,768,215 to prevent Large Chest integer overflows and item movement lag. Change it at your own risk!"
+}

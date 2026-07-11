@@ -1,0 +1,35 @@
+{
+    "schemaVersion": 1,
+    "id": "potion-stacker-addon",
+    "version": "${version}",
+    "name": "Potion Stacker Addon",
+    "description": "An addon for Stack Size Adjuster that allows customizing stack limits for potions dynamically using GameRules or configuration screens.",
+    "authors": [
+        "Dasik (Rifaditya)"
+    ],
+    "license": "GPL-3.0-or-later",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "net.instantgratification.potionstacker.PotionStackerFabric"
+        ],
+        "client": [
+            "net.instantgratification.potionstacker.PotionStackerFabricClient"
+        ],
+        "modmenu": [
+            "net.instantgratification.potionstacker.config.ModMenuIntegration"
+        ]
+    },
+    "depends": {
+        "fabricloader": ">=0.19.1",
+        "minecraft": "${minecraft_dependency}",
+        "java": ">=25",
+        "fabric-api": "*",
+        "dasik-library": "*",
+        "stack-size-adjuster": ">=1.4.10+26.2"
+    },
+    "suggests": {
+        "cloth-config": "*",
+        "modmenu": "*"
+    }
+}
