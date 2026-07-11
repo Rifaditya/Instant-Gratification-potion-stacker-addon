@@ -7,6 +7,10 @@
     "authors": [
         "Dasik (Rifaditya)"
     ],
+    "contact": {
+        "homepage": "https://github.com/Rifaditya/Instant-Gratification-potion-stacker-addon",
+        "sources": "https://github.com/Rifaditya/Instant-Gratification-potion-stacker-addon"
+    },
     "license": "GPL-3.0-or-later",
     "environment": "*",
     "entrypoints": {
