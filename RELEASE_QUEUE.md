@@ -5,5 +5,6 @@ Open this file in your editor and change `[ ]` to `[x]` when you publish a versi
 
 ## 🚀 Published & Backlog Queue
 
+- [ ] **`1.1.0+26.2`** (2026-07-15) - - Stew & Soup Stacking Support. - - Added independent custom stack limits for stews/soups configurable via YACL and GameRules.
 - [ ] **`1.0.1+26.2`** (2026-07-11) - - Remove Live Config Sync. - - Removed live GameRule syncing from YACL config save block so config changes only define default values for newly created worlds.
 - [ ] **`1.0.0+26.2`** (2026-07-11) - - Potion Stacker Addon Initial Release. - - Initial release of Potion Stacker Addon mod.

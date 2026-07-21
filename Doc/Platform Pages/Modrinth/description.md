@@ -1,4 +1,4 @@
-<p align="center">
+﻿<p align="center">
     <a href="https://modrinth.com/mod/fabric-api"><img src="https://img.shields.io/badge/Requires-Fabric_API-blue?style=for-the-badge&logo=fabric" alt="Requires Fabric API"></a>
     <a href="https://modrinth.com/mod/stack-size-adjuster"><img src="https://img.shields.io/badge/Requires-Stack_Size_Adjuster-blue?style=for-the-badge" alt="Requires Stack Size Adjuster"></a>
     <img src="https://img.shields.io/badge/Language-Java_25-orange?style=for-the-badge&logo=java" alt="Java 25">
@@ -11,11 +11,11 @@
 ### 🎮 Version Compatibility & Parity
 
 This mod is active and fully supported:
-* **Minecraft 26.2+**: Current public release — **`v1.0.0`**
+* **Minecraft 26.2+**: Active support
 
-> **Stack your potions. Consolidate your inventory.**
+> **Stack your potions and stews. Consolidate your inventory.**
 
-Tired of potions cluttering your inventory slots and taking up valuable backpack space? **Potion Stacker Addon** is a dedicated addon for **[Stack Size Adjuster](https://modrinth.com/mod/stack-size-adjuster)** that allows regular potions, splash potions, lingering potions, and water bottles to stack up to a customizable limit. Keep your combat resources compact and ready for adventure.
+Tired of potions and stews cluttering your inventory slots and taking up valuable backpack space? **Potion Stacker Addon** is a dedicated addon for **[Stack Size Adjuster](https://modrinth.com/mod/stack-size-adjuster)** that allows regular potions, splash potions, lingering potions, water bottles, stews, and soups to stack up to a customizable limit. Keep your combat and survival resources compact and ready for adventure.
 
 Part of the **Instant Gratification Collection** — mods that respect the player's time.
 
@@ -30,6 +30,13 @@ Overridden default stack limits specifically for:
 - Lingering Potions
 - Water Bottles
 - Mundane / Thick / Awkward Potions
+
+### 🍲 Stackable Stews & Soups
+Overridden default stack limits specifically for:
+- Mushroom Stew
+- Rabbit Stew
+- Beetroot Soup
+- Suspicious Stew
 
 ### 🎚️ Customizable Stack Limit
 No hardcoded values! Adjust limits dynamically via `/gamerule` or config menus from `1` up to `2,147,483,647`. Default limit: `16`.
@@ -49,6 +56,7 @@ Configure limits on-the-fly inside dynamic worlds. Server settings automatically
 
 Configure option in-game using `/gamerule` or via the integrated YACL config GUI:
 - `potion-stacker-addon:potion_limit`
+- `potion-stacker-addon:stew_limit`
 
 ---
 
@@ -78,11 +86,11 @@ If you enjoy the **Instant Gratification** collection, consider supporting devel
 
 ---
 
-## 📦 Modpack Permissions
+> [!IMPORTANT]
+> **📦 Modpack Permissions & Distribution:** You are free to include this mod in any modpack on any platform. However, the mod itself must be downloaded from its official distribution pages on **Modrinth** or **CurseForge**. Re-uploading or redistributing the mod jar file to third-party sites is strictly prohibited unless explicitly permitted by the creator.
+> 
+> **License & Forks:** Since the source code is licensed under **GNU GPLv3**, you are fully permitted to fork the repository, make modifications, build your own versions, and distribute them under the terms of the GPLv3. The prohibition on third-party redistribution applies exclusively to the official compiled releases/jars published by the original creator (Dasik/Rifaditya). Forks must be published as distinct projects, not direct re-uploads of official builds.
 
-> [!NOTE]
-> **Modpack Distribution Policy**:
-> Since this mod is open-source (GPLv3), you are free to include it in any modpack! If you want to support my work, downloading it directly through the official platform page (Modrinth) is highly appreciated.
 
 ---
 
