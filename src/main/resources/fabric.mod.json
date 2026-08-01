@@ -12,6 +12,7 @@
         "sources": "https://github.com/Rifaditya/Instant-Gratification-potion-stacker-addon"
     },
     "license": "GPL-3.0-or-later",
+    "icon": "assets/potion-stacker-addon/icon.png",
     "environment": "*",
     "entrypoints": {
         "main": [
@@ -29,7 +30,7 @@
         "minecraft": "${minecraft_dependency}",
         "java": ">=25",
         "fabric-api": "*",
-        "dasik-library": "*",
+        "dasik-library": ">=1.8.3",
         "stack-size-adjuster": ">=1.4.10+26.2"
     },
     "suggests": {

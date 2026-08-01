@@ -1,3 +1,4 @@
+// Copyright (C) 2026 Dasik (Rifaditya) | GNU GPLv3
 package net.instantgratification.potionstacker;
 
 import net.fabricmc.api.ClientModInitializer;
@@ -11,7 +12,7 @@ public class PotionStackerFabricClient implements ClientModInitializer {
     public void onInitializeClient() {
         ClientPlayNetworking.registerGlobalReceiver(PotionLimitSyncPayload.TYPE, (payload, context) -> {
             context.client().execute(() -> {
-                PotionStackerManager.setClientLimit(payload.potionLimit());
+                PotionStackerManager.setClientLimit(payload.potionLimit(), payload.stewLimit());
             });
         });
     }

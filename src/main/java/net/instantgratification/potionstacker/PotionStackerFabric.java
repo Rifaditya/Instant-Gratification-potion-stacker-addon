@@ -1,3 +1,4 @@
+// Copyright (C) 2026 Dasik (Rifaditya) | GNU GPLv3
 package net.instantgratification.potionstacker;
 
 import net.fabricmc.api.ModInitializer;
@@ -27,6 +28,7 @@ public class PotionStackerFabric implements ModInitializer {
     );
 
     public static GameRule<Integer> POTION_LIMIT;
+    public static GameRule<Integer> STEW_LIMIT;
 
     @Override
     public void onInitialize() {
@@ -47,13 +49,21 @@ public class PotionStackerFabric implements ModInitializer {
             .range(1, Integer.MAX_VALUE)
             .register();
 
+        // Register Stew Limit GameRule with dynamic default loaded from baseline config
+        STEW_LIMIT = DynamicGameRuleManager.integerRule(MOD_ID + ":stew_limit", CUSTOM_CATEGORY, PotionStackerConfig.get().stewLimit)
+            .name("Stew Limit")
+            .description("Maximum stack size for stews and beetroot soup. Default: 16")
+            .range(1, Integer.MAX_VALUE)
+            .register();
+
         // Register Payload S2C
         PayloadTypeRegistry.clientboundPlay().register(PotionLimitSyncPayload.TYPE, PotionLimitSyncPayload.CODEC);
 
         // Sync limits to client when player joins the world
         ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
             sender.sendPacket(new PotionLimitSyncPayload(
-                PotionStackerManager.getPotionLimit()
+                PotionStackerManager.getPotionLimit(),
+                PotionStackerManager.getStewLimit()
             ));
         });
 
@@ -67,10 +77,12 @@ public class PotionStackerFabric implements ModInitializer {
             // If the world is newly created (not initialized yet), apply the baseline config template directly to the active GameRules
             if (!server.getWorldData().overworldData().isInitialized()) {
                 rules.set(POTION_LIMIT, PotionStackerConfig.get().potionLimit, server);
+                rules.set(STEW_LIMIT, PotionStackerConfig.get().stewLimit, server);
             }
 
-            int limit = rules.get(POTION_LIMIT);
-            PotionStackerManager.setLimits(limit, server);
+            int pLimit = rules.get(POTION_LIMIT);
+            int sLimit = rules.get(STEW_LIMIT);
+            PotionStackerManager.setLimits(pLimit, sLimit, server);
         });
     }
 }

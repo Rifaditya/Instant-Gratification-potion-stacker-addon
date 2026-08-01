@@ -1,3 +1,4 @@
+// Copyright (C) 2026 Dasik (Rifaditya) | GNU GPLv3
 package net.instantgratification.potionstacker.config;
 
 import java.nio.file.Path;
@@ -10,6 +11,7 @@ public class PotionStackerConfig {
     public int configVersion = VERSION;
 
     public int potionLimit = 16;
+    public int stewLimit = 16;
 
     public static synchronized void load(Path configDir) {
         CONFIG_PATH = configDir.resolve("potion-stacker.json");

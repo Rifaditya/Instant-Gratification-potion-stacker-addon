@@ -1,3 +1,4 @@
+// Copyright (C) 2026 Dasik (Rifaditya) | GNU GPLv3
 package net.instantgratification.potionstacker.config;
 
 // Verified against: YaclScreenHelper.java (YACL 3.9.5)
@@ -35,6 +36,27 @@ public class YaclScreenHelper {
                             16,
                             () -> config.potionLimit,
                             val -> config.potionLimit = val
+                        )
+                        .controller(opt -> IntegerFieldControllerBuilder.create(opt)
+                            .min(1)
+                            .max(Integer.MAX_VALUE)
+                        )
+                        .build()
+                    )
+
+                    // Stew Limit
+                    .option(Option.<Integer>createBuilder()
+                        .name(Component.translatable("config.potion-stacker-addon.option.stew_limit"))
+                        .description(val -> {
+                            if (val > 39768215) {
+                                return OptionDescription.of(Component.translatable("config.potion-stacker-addon.option.warning", val));
+                            }
+                            return OptionDescription.of(Component.translatable("config.potion-stacker-addon.option.stew_limit.description"));
+                        })
+                        .binding(
+                            16,
+                            () -> config.stewLimit,
+                            val -> config.stewLimit = val
                         )
                         .controller(opt -> IntegerFieldControllerBuilder.create(opt)
                             .min(1)

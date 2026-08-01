@@ -1,3 +1,4 @@
+// Copyright (C) 2026 Dasik (Rifaditya) | GNU GPLv3
 package net.instantgratification.potionstacker.util;
 
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
@@ -9,9 +10,14 @@ import net.instantgratification.potionstacker.network.PotionLimitSyncPayload;
 
 public class PotionStackerManager {
     private static volatile int potionLimit = 16;
+    private static volatile int stewLimit = 16;
 
     public static int getPotionLimit() {
         return potionLimit;
+    }
+
+    public static int getStewLimit() {
+        return stewLimit;
     }
 
     public static int getModifiedStackSize(Item item, int original) {
@@ -21,15 +27,26 @@ public class PotionStackerManager {
         if (item instanceof PotionItem) {
             return potionLimit;
         }
+        if (isStewOrSoup(item)) {
+            return stewLimit;
+        }
         return original;
     }
 
-    public static void setLimits(int limit, MinecraftServer server) {
-        boolean changed = (limit != potionLimit);
+    public static boolean isStewOrSoup(Item item) {
+        return item == net.minecraft.world.item.Items.MUSHROOM_STEW
+            || item == net.minecraft.world.item.Items.RABBIT_STEW
+            || item == net.minecraft.world.item.Items.BEETROOT_SOUP
+            || item == net.minecraft.world.item.Items.SUSPICIOUS_STEW;
+    }
+
+    public static void setLimits(int pLimit, int sLimit, MinecraftServer server) {
+        boolean changed = (pLimit != potionLimit || sLimit != stewLimit);
         if (changed) {
-            potionLimit = limit;
+            potionLimit = pLimit;
+            stewLimit = sLimit;
             if (server != null) {
-                PotionLimitSyncPayload payload = new PotionLimitSyncPayload(limit);
+                PotionLimitSyncPayload payload = new PotionLimitSyncPayload(pLimit, sLimit);
                 for (ServerPlayer player : server.getPlayerList().getPlayers()) {
                     ServerPlayNetworking.send(player, payload);
                     
@@ -46,12 +63,18 @@ public class PotionStackerManager {
     }
 
     public static void setLimit(String path, int value, MinecraftServer server) {
+        int nextPotion = potionLimit;
+        int nextStew = stewLimit;
         if (path.equals("potion_limit")) {
-            setLimits(value, server);
+            nextPotion = value;
+        } else if (path.equals("stew_limit")) {
+            nextStew = value;
         }
+        setLimits(nextPotion, nextStew, server);
     }
 
-    public static void setClientLimit(int limit) {
-        potionLimit = limit;
+    public static void setClientLimit(int pLimit, int sLimit) {
+        potionLimit = pLimit;
+        stewLimit = sLimit;
     }
 }
