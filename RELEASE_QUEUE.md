@@ -5,7 +5,8 @@ Open this file in your editor and change `[ ]` to `[x]` when you publish a versi
 
 ## 🚀 Published & Backlog Queue
 
-- [ ] **`1.1.3+26.2`** (2026-08-10) - CustomStackSizeOverride Registration. - Explicit registration with CustomStackSizeOverride to prevent legacy BiFunction fallback issues.
+- [ ] **`1.1.4+26.2`** (2026-08-10) - Release Version Sync. - Fresh release build for Modrinth distribution.
+- [x] **`1.1.3+26.2`** (2026-08-10) - CustomStackSizeOverride Registration. - Explicit registration with CustomStackSizeOverride to prevent legacy BiFunction fallback issues.
 - [x] **`1.1.2+26.2`** (2026-08-10) - Multi-Addon Deferral Fix. - Added check to defer stew handling to Stew Stacker Addon when co-installed.
 - [x] **`1.1.1+26.2`** (2026-07-22) - - Icon Optimization & Dependency Bounds. - - Compressed icon asset, aligned dasik-library to open-ended `>=1.8.3` bound.
 - [x] **`1.1.0+26.2`** (2026-07-15) - - Stew & Soup Stacking Support. - - Added independent custom stack limits for stews/soups configurable via YACL and GameRules.

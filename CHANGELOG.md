@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.4+26.2] - 2026-08-10
+
+### Fixed
+- **Release Version Sync**: Fresh release build for Modrinth distribution.
+
 ## [1.1.3+26.2] - 2026-08-10
 
 ### Fixed
