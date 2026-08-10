@@ -38,8 +38,9 @@ public class PotionStackerFabric implements ModInitializer {
         PotionStackerConfig.load(FabricLoader.getInstance().getConfigDir());
 
         // Register custom stack size override into Stack Size Adjuster's manager
-        net.instantgratification.stacksizeadjuster.util.StackSizeManager.registerOverride((item, originalSize) -> 
-            PotionStackerManager.getModifiedStackSize(item, originalSize)
+        net.instantgratification.stacksizeadjuster.util.StackSizeManager.registerOverride(
+            (net.instantgratification.stacksizeadjuster.util.CustomStackSizeOverride) (item, originalSize) -> 
+                PotionStackerManager.getModifiedStackSize(item, originalSize)
         );
 
         // Register Potion Limit GameRule with dynamic default loaded from baseline config

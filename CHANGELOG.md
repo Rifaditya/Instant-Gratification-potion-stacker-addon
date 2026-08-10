@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.3+26.2] - 2026-08-10
+
+### Fixed
+- **CustomStackSizeOverride Alignment**: Updated `PotionStackerFabric` to register directly with `CustomStackSizeOverride`, preventing unhandled item fallback issues in `StackSizeManager`.
+
 ## [1.1.2+26.2] - 2026-08-10
 
 ### Fixed
