@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.2+26.2] - 2026-08-10
+
+### Fixed
+- **Multi-Addon Interoperability**: Updated `PotionStackerManager` to check if `stew-stacker-addon` is loaded. When `stew-stacker-addon` is installed, `Potion Stacker Addon` automatically defers stew handling to `Stew Stacker Addon`, preventing priority conflicts when all 3 mods are installed together.
+
 ## [1.1.1+26.2] - 2026-07-22
 
 ### Changed

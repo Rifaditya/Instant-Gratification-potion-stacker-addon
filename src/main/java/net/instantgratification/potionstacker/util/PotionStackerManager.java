@@ -8,6 +8,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PotionItem;
 import net.instantgratification.potionstacker.network.PotionLimitSyncPayload;
 
+import net.fabricmc.loader.api.FabricLoader;
+
 public class PotionStackerManager {
     private static volatile int potionLimit = 16;
     private static volatile int stewLimit = 16;
@@ -28,9 +30,13 @@ public class PotionStackerManager {
             return potionLimit;
         }
         if (isStewOrSoup(item)) {
+            // Defer stew handling to stew-stacker-addon if loaded to prevent conflicts
+            if (FabricLoader.getInstance().isModLoaded("stew-stacker-addon")) {
+                return -1;
+            }
             return stewLimit;
         }
-        return original;
+        return -1;
     }
 
     public static boolean isStewOrSoup(Item item) {
