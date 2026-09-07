@@ -1,0 +1,51 @@
+# 🧪 Minecraft 26.2 Documentation Portal
+
+🌐 **Languages**: [[🇺🇸 English|Home]] | [[🇨🇳 简体中文|zh_cn-Home]] | [[🇭🇰 繁體中文|zh_tw-Home]] | [[🇷🇺 Русский|ru_ru-Home]] | [[🇪🇸 Español|es_es-Home]] | [[🇩🇪 Deutsch|de_de-Home]] | [[🇫🇷 Français|fr_fr-Home]] | [[🇧🇷 Português|pt_br-Home]] | [[🇯🇵 日本語|ja_jp-Home]] | [[🇮🇩 Bahasa Indonesia|id_id-Home]] | [[🇰🇷 한국어|ko_kr-Home]]
+
+> 📌 **程式碼倉庫來源免責聲明**：本維基文件反映了**程式碼倉庫中的當前原始碼狀態**，可能包含領先於 CurseForge 與 Modrinth 平臺公開發布版本的最新未發布提交或開發中功能。
+
+歡迎查閱 **Instant Gratification: Potion Stacker Addon（即時滿足：藥水堆疊擴充）** 面向 **Minecraft 26.2**（針對 `MC 26.1.2 / 26.2`）的專用技術文件門戶。該版本樹內的所有文件均嚴格反映針對該發布版本的位元組碼對映、Loom 相依性與功能規範。
+
+---
+
+## 🧭 Minecraft 26.2 導航矩陣
+
+| 功能特性 / 子系統 | 說明 | 專用維基頁面 |
+| :--- | :--- | :--- |
+| **藥水堆疊與物品欄人體工學** | 堆疊機制、釀造台互動處理、容器儲存壓縮數學 | [[26.2 藥水堆疊與物品欄人體工學|zh_tw-26.2-Potion-Stacking-and-Inventory-Ergonomics]] |
+| **網路同步與資料負載** | S2C 負載生命週期、握手封包、動態選單狀態重新整理 | [[26.2 網路同步與資料負載|zh_tw-26.2-Network-Synchronization-and-Payloads]] |
+| **配置與動態遊戲規則** | 全部 GameRule 與 YACL v3 配置項的完整參考矩陣 | [[26.2 配置與動態遊戲規則|zh_tw-26.2-Configuration-and-GameRules]] |
+| **架構設計與擴充鉤子** | 套件結構設計、零 Mixin 架構、CustomStackSizeOverride 回呼 | [[26.2 架構設計與擴充鉤子|zh_tw-26.2-Architecture-and-Addon-Hooks]] |
+| **開發者環境配置與工具鏈** | JDK 25 開發環境、Gradle 9.3+ 構建命令、Loom 配置 | [[26.2 開發者環境配置與工具鏈|zh_tw-26.2-Developer-Setup-and-Building]] |
+
+---
+
+## 📊 技術規範資訊框
+
+| 參數 | 版本規範 |
+| :--- | :--- |
+| **Minecraft Release Target** | `MC 26.1.2 / 26.2` |
+| **Mod SemVer Release** | `1.1.3+26.2` |
+| **Fabric Loader Requirement** | `>=0.19.1` |
+| **Java Platform** | OpenJDK 25 (Hotspot 64-bit) |
+| **Fabric API Dependency** | `0.150.1+26.2` |
+| **DasikLibrary Dependency** | `>=1.8.3` |
+| **Stack Size Adjuster Dependency** | `>=1.4.10+26.2` |
+| **Mixin Footprint** | 0 Mixins (Pure Callback Delegation) |
+| **Primary Network Payload** | `potion-stacker:sync_limit` |
+
+---
+
+## 🧪 核心子系統亮點
+
+1. **全面涵蓋藥水家族**：為所有藥水類別應用可配置的堆疊上限：常規飲用藥水、飛濺藥水、滯留藥水以及平凡水瓶。
+2. **釀造台槽位完整性保護**：嚴格保留原版釀造邏輯，Shift 快速放入時每槽僅注入 1 瓶，避免配方破壞，同時保留背包內剩餘堆疊。
+3. **動態遊戲規則驅動**：透過 `potion-stacker-addon:potion_limit` 與 `potion-stacker-addon:stew_limit` 支援遊戲內即時修改，無需重啟遊戲。
+4. **智慧擴充共存**：自動偵測 `stew-stacker-addon` 並讓渡燉菜處理邏輯，徹底杜絕衝突與重疊。
+
+---
+
+## 🔗 全域性與外部導航
+* [[🏠 返回維基總首頁|zh_tw-Home]]
+* [[📊 查閱全域性版本相容性矩陣|zh_tw-Version-Compatibility]]
+* [[🔧 查閱疑難排解與 FAQ 指南|zh_tw-Troubleshooting-and-FAQ]]

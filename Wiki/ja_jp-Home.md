@@ -1,6 +1,6 @@
 # 🧪 インスタント・グラティフィケーション：ポーションスタッカー追加パック Wiki
 
-🌐 **Languages**: [[🇺🇸 English|Home]] | [[🇨🇳 简体中文|zh_cn-Home]] | [[🇭🇰 繁體中文|zh_tw-Home]] | [[🇷🇺 Русский|ru_ru-Home]] | [[🇪🇸 Español|es_es-Home]] | [[🇩🇪 Deutsch|de_de-Home]] | [[🇫🇷 Français|fr_fr-Home]] | [[🇧🇷 Português|pt_br-Home]] | [[🇯🇵 日本語|ja_jp-Home]] | [[🇮🇩 Bahasa Indonesia|id_id-Home]] | [[🇰🇷 한국어|ko_kr-Home]]
+🌐 **Languages**: [[🏠 Wiki ホーム|ja_jp-Home]] | [[🏠 Wiki ホーム|ja_jp-Home]] | [[🏠 Wiki ホーム|ja_jp-Home]] | [[🏠 Wiki ホーム|ja_jp-Home]] | [[🏠 Wiki ホーム|ja_jp-Home]] | [[🏠 Wiki ホーム|ja_jp-Home]] | [[🏠 Wiki ホーム|ja_jp-Home]] | [[🏠 Wiki ホーム|ja_jp-Home]] | [[🏠 Wiki ホーム|ja_jp-Home]] | [[🏠 Wiki ホーム|ja_jp-Home]] | [[🏠 Wiki ホーム|ja_jp-Home]]
 
 > 📌 **リポジトリソース免責事項**: このWikiのドキュメントは**リポジトリ内の現在のソースコード状態**を反映しており、CurseForgeおよびModrinthでの公開リリース前の開発中機能や最新コミットが含まれる場合があります。
 
@@ -12,8 +12,8 @@
 
 | Minecraft Target | Mod Version | Fabric Loader | Portal Link |
 | :--- | :---: | :---: | :--- |
-| **Minecraft 26.2** | `1.1.3+26.2` | `>=0.19.1` | [[👉 Enter Minecraft 26.2 Documentation Portal|26.2-Home]] |
-| **Minecraft 26.3** | `1.1.3+26.3` | `>=0.19.3` | [[👉 Enter Minecraft 26.3 Documentation Portal|26.3-Home]] |
+| **Minecraft 26.2** | `1.1.3+26.2` | `>=0.19.1` | [[🏠 Wiki ホーム|ja_jp-Home]] |
+| **Minecraft 26.3** | `1.1.3+26.3` | `>=0.19.3` | [[🏠 Wiki ホーム|ja_jp-Home]] |
 
 ---
 
@@ -38,7 +38,7 @@
 
 ## 📚 主要ドキュメントリンク
 
-* [[📊 Version Compatibility Matrix|Version-Compatibility]]
-* [[🔧 Troubleshooting & FAQ Guide|Troubleshooting-and-FAQ]]
-* [[🛠️ Developer Setup & Build Guide|Developer-Setup-and-Building]]
-* [[🏠 Return to Main Home Portal|Home]]
+* [[📊 バージョン互換性マトリクス|ja_jp-Version-Compatibility]]
+* [[🔧 トラブルシューティング & FAQ|ja_jp-Troubleshooting-and-FAQ]]
+* [[🛠️ 開発環境セットアップ & 統合ビルドガイド|ja_jp-Developer-Setup-and-Building]]
+* [[🏠 Wiki ホーム|ja_jp-Home]]

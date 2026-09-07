@@ -1,6 +1,6 @@
 # 🧪 Instant Gratification: Potion Stacker Addon Wiki
 
-🌐 **Languages**: [[🇺🇸 English|Home]] | [[🇨🇳 简体中文|zh_cn-Home]] | [[🇭🇰 繁體中文|zh_tw-Home]] | [[🇷🇺 Русский|ru_ru-Home]] | [[🇪🇸 Español|es_es-Home]] | [[🇩🇪 Deutsch|de_de-Home]] | [[🇫🇷 Français|fr_fr-Home]] | [[🇧🇷 Português|pt_br-Home]] | [[🇯🇵 日本語|ja_jp-Home]] | [[🇮🇩 Bahasa Indonesia|id_id-Home]] | [[🇰🇷 한국어|ko_kr-Home]]
+🌐 **Languages**: [[🏠 Beranda Wiki|id_id-Home]] | [[🏠 Beranda Wiki|id_id-Home]] | [[🏠 Beranda Wiki|id_id-Home]] | [[🏠 Beranda Wiki|id_id-Home]] | [[🏠 Beranda Wiki|id_id-Home]] | [[🏠 Beranda Wiki|id_id-Home]] | [[🏠 Beranda Wiki|id_id-Home]] | [[🏠 Beranda Wiki|id_id-Home]] | [[🏠 Beranda Wiki|id_id-Home]] | [[🏠 Beranda Wiki|id_id-Home]] | [[🏠 Beranda Wiki|id_id-Home]]
 
 > 📌 **Pemberitahuan Sumber Repositori**: Dokumentasi di Wiki ini mencerminkan **status kode sumber saat ini di repositori**, yang mungkin mencakup komit terbaru yang belum dirilis atau fitur dalam pengembangan sebelum rilis publik di CurseForge dan Modrinth.
 
@@ -12,8 +12,8 @@ Selamat datang di dokumentasi resmi untuk **Instant Gratification: Potion Stacke
 
 | Minecraft Target | Mod Version | Fabric Loader | Portal Link |
 | :--- | :---: | :---: | :--- |
-| **Minecraft 26.2** | `1.1.3+26.2` | `>=0.19.1` | [[👉 Enter Minecraft 26.2 Documentation Portal|26.2-Home]] |
-| **Minecraft 26.3** | `1.1.3+26.3` | `>=0.19.3` | [[👉 Enter Minecraft 26.3 Documentation Portal|26.3-Home]] |
+| **Minecraft 26.2** | `1.1.3+26.2` | `>=0.19.1` | [[🏠 Beranda Wiki|id_id-Home]] |
+| **Minecraft 26.3** | `1.1.3+26.3` | `>=0.19.3` | [[🏠 Beranda Wiki|id_id-Home]] |
 
 ---
 
@@ -38,7 +38,7 @@ Selamat datang di dokumentasi resmi untuk **Instant Gratification: Potion Stacke
 
 ## 📚 Tautan Dokumentasi Penting
 
-* [[📊 Version Compatibility Matrix|Version-Compatibility]]
-* [[🔧 Troubleshooting & FAQ Guide|Troubleshooting-and-FAQ]]
-* [[🛠️ Developer Setup & Build Guide|Developer-Setup-and-Building]]
-* [[🏠 Return to Main Home Portal|Home]]
+* [[📊 Matriks Kompatibilitas Versi|id_id-Version-Compatibility]]
+* [[🔧 Panduan Pemecahan Masalah & FAQ|id_id-Troubleshooting-and-FAQ]]
+* [[🛠️ Pengaturan Pengembang & Panduan Build Terpadu|id_id-Developer-Setup-and-Building]]
+* [[🏠 Beranda Wiki|id_id-Home]]

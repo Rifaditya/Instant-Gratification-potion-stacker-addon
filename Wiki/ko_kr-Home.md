@@ -1,6 +1,6 @@
 # 🧪 인스턴트 그라티피케이션: 포션 스태커 애드온 Wiki
 
-🌐 **Languages**: [[🇺🇸 English|Home]] | [[🇨🇳 简体中文|zh_cn-Home]] | [[🇭🇰 繁體中文|zh_tw-Home]] | [[🇷🇺 Русский|ru_ru-Home]] | [[🇪🇸 Español|es_es-Home]] | [[🇩🇪 Deutsch|de_de-Home]] | [[🇫🇷 Français|fr_fr-Home]] | [[🇧🇷 Português|pt_br-Home]] | [[🇯🇵 日本語|ja_jp-Home]] | [[🇮🇩 Bahasa Indonesia|id_id-Home]] | [[🇰🇷 한국어|ko_kr-Home]]
+🌐 **Languages**: [[🏠 위키 홈|ko_kr-Home]] | [[🏠 위키 홈|ko_kr-Home]] | [[🏠 위키 홈|ko_kr-Home]] | [[🏠 위키 홈|ko_kr-Home]] | [[🏠 위키 홈|ko_kr-Home]] | [[🏠 위키 홈|ko_kr-Home]] | [[🏠 위키 홈|ko_kr-Home]] | [[🏠 위키 홈|ko_kr-Home]] | [[🏠 위키 홈|ko_kr-Home]] | [[🏠 위키 홈|ko_kr-Home]] | [[🏠 위키 홈|ko_kr-Home]]
 
 > 📌 **저장소 소스 고지사항**: 이 위키의 문서는 **저장소의 현재 소스 코드 상태**를 반영하며, CurseForge 및 Modrinth의 공개 릴리스 빌드에 앞서 최근 릴리스되지 않은 커밋이나 개발 기능이 포함될 수 있습니다.
 
@@ -12,8 +12,8 @@
 
 | Minecraft Target | Mod Version | Fabric Loader | Portal Link |
 | :--- | :---: | :---: | :--- |
-| **Minecraft 26.2** | `1.1.3+26.2` | `>=0.19.1` | [[👉 Enter Minecraft 26.2 Documentation Portal|26.2-Home]] |
-| **Minecraft 26.3** | `1.1.3+26.3` | `>=0.19.3` | [[👉 Enter Minecraft 26.3 Documentation Portal|26.3-Home]] |
+| **Minecraft 26.2** | `1.1.3+26.2` | `>=0.19.1` | [[🏠 위키 홈|ko_kr-Home]] |
+| **Minecraft 26.3** | `1.1.3+26.3` | `>=0.19.3` | [[🏠 위키 홈|ko_kr-Home]] |
 
 ---
 
@@ -38,7 +38,7 @@
 
 ## 📚 주요 문서 바로가기
 
-* [[📊 Version Compatibility Matrix|Version-Compatibility]]
-* [[🔧 Troubleshooting & FAQ Guide|Troubleshooting-and-FAQ]]
-* [[🛠️ Developer Setup & Build Guide|Developer-Setup-and-Building]]
-* [[🏠 Return to Main Home Portal|Home]]
+* [[📊 버전 호환성 매트릭스|ko_kr-Version-Compatibility]]
+* [[🔧 문제 해결 및 FAQ|ko_kr-Troubleshooting-and-FAQ]]
+* [[🛠️ 개발자 환경 설정 및 통합 빌드 가이드|ko_kr-Developer-Setup-and-Building]]
+* [[🏠 위키 홈|ko_kr-Home]]
