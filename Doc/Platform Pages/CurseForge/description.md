@@ -1,139 +1,76 @@
 <p align="center">
-  <a href="https://www.curseforge.com/minecraft/mc-mods/fabric-api"><img src="https://img.shields.io/badge/Requires-Fabric_API-blue?style=for-the-badge&amp;logo=fabric" alt="Requires Fabric API"></a>
-  <a href="https://www.curseforge.com/minecraft/mc-mods/dasik-libary"><img src="https://img.shields.io/badge/Requires-Dasik_Library-8A2BE2?style=for-the-badge" alt="Requires Dasik Library"></a>
-  <a href="https://www.curseforge.com/minecraft/mc-mods/ig-stack-size-adjuster"><img src="https://img.shields.io/badge/Requires-Stack_Size_Adjuster-blue?style=for-the-badge" alt="Requires Stack Size Adjuster"></a>
-  <img src="https://img.shields.io/badge/Language-Java_25-orange?style=for-the-badge&amp;logo=java" alt="Java 25">
-  <img src="https://img.shields.io/badge/License-GPLv3-green?style=for-the-badge" alt="License GPLv3">
-  <img src="https://img.shields.io/badge/Minecraft-26.2+-brightgreen?style=for-the-badge" alt="Minecraft 26.2+">
+<a href="https://discord.gg/EV99bgAFqb"><img src="https://img.shields.io/badge/Discord-Join_Community-5865F2?style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="Join Discord"></a>
+<a href="https://modrinth.com/mod/fabric-api"><img src="https://img.shields.io/badge/Requires-Fabric_API-blue?style=for-the-badge&amp;logo=fabric" alt="Requires Fabric API"></a>
+<img src="https://img.shields.io/badge/Environment-Server_&amp;_Client-success?style=for-the-badge" alt="Server &amp; Client">
+<img src="https://img.shields.io/badge/Language-Java_25-orange?style=for-the-badge&amp;logo=java" alt="Java 25">
+<img src="https://img.shields.io/badge/License-GPLv3-green?style=for-the-badge" alt="License GPLv3">
+<img src="https://img.shields.io/badge/Minecraft-26.2+-brightgreen?style=for-the-badge" alt="Minecraft 26.2+">
 </p>
-
 <h2>🧪 Potion Stacker Addon</h2>
-
-<blockquote><p><strong>&ldquo;Consolidate Your Alchemy. Stack Potions and Reclaim Your Inventory.&rdquo;</strong></p></blockquote>
-
-<blockquote><p><strong>1 Jar 1 Version Policy:</strong> I build <strong>1 dedicated JAR for each Minecraft version</strong> (e.g. MC 26.2, MC 26.3). Please download the exact build that matches your Minecraft installation.<br><br><strong>Dependency Requirement:</strong> For modern Minecraft 26.x releases (26.2, 26.3+), this mod requires <strong>Fabric API</strong>, <strong>Dasik Library</strong> (<code>v1.8.2+</code>), and <a href="https://www.curseforge.com/minecraft/mc-mods/ig-stack-size-adjuster"><strong>Stack Size Adjuster</strong></a> (<code>v1.4.10+26.2</code>).</p></blockquote>
-
-<p>Few things in vanilla Minecraft are as frustrating as preparing for a dangerous boss raid or trial chamber, only to discover that every single potion hogs an entire inventory slot. You are forced to choose between bringing essential healing potions, combat buffs, weapons, or collecting spoils and treasure.</p>
-
-<p><strong>Potion Stacker Addon</strong> solves alchemy inventory clutter permanently. As an official addon for <strong>Stack Size Adjuster</strong>, it enables full stackability for all regular potions, splash potions, lingering potions, and water bottles up to 16, 64, or any custom limit&mdash;with flawless empty bottle returns and brewing stand parity!</p>
-
-<p>Part of the <strong>Instant Gratification Collection</strong> &mdash; mods that respect the player's time.</p>
-
+<blockquote><p><strong>"Brew More, Clutter Less. Stack Drinkable, Splash, and Lingering Potions Safely."</strong></p></blockquote>
 <hr>
-
+<h2>📖 Introduction</h2>
+<p>Ever since alchemy was introduced to Minecraft, potions have remained stubbornly limited to an unstackable single item per inventory slot. Preparing for an arduous boss battle against the Wither or Ender Dragon, navigating deep Ancient Cities, or exploring Nether Fortresses turns your inventory into a cluttered mess where a standard combat buff loadout (Speed, Fire Resistance, Strength, Regeneration, Healing) completely wipes out your available bag space.</p>
+<p><strong>Potion Stacker Addon</strong> solves the alchemy storage dilemma under the <strong>Instant Gratification</strong> design philosophy. It seamlessly stacks standard Drinkable Potions, Splash Potions, and Lingering Potions up to <strong>16</strong> (or custom limits) in your inventory, chests, and brewing stands. Engineered with smooth split-stack drinking mechanics, automatic empty glass bottle returns, dispenser firing compatibility, and client-server sync, your potion combat experience becomes effortless and organized.</p>
+<blockquote><p><strong>1 Jar 1 Version Policy:</strong> I build <strong>1 dedicated JAR for each Minecraft version</strong> (e.g. MC 26.2, MC 26.3). Please download the exact build that matches your Minecraft installation. <strong>Addon &amp; Standalone Synergy:</strong> Functions as an optional companion addon for <strong>Stack Size Adjuster</strong> or as a 100% self-contained standalone potion mod!</p></blockquote>
+<p>Part of the <strong>Instant Gratification Collection</strong> — mods that respect the player's time.</p>
+<hr>
 <h2>✨ Features</h2>
-
-<h3>🧪 Universal Potion Stacking</h3>
-<p>Stack all liquid alchemy bottles neatly in your hotbar, backpacks, and chests:</p>
+<h3>🍶 Safe Potion Stacking (Up to 16 by Default)</h3>
 <ul>
-  <li><strong>Regular Potions:</strong> Instant Health, Speed, Regeneration, Fire Resistance, Strength, and all standard brews.</li>
-  <li><strong>Splash &amp; Lingering Potions:</strong> Stack throwable combat potions for rapid-fire deployment during boss battles.</li>
-  <li><strong>Water Bottles &amp; Bases:</strong> Awkward Potions, Thick Potions, Mundane Potions, and pure Water Bottles stack smoothly for streamlined alchemy brewing sessions.</li>
+  <li><strong>Unified Alchemy Stacking:</strong> Drinkable potions, Splash Potions, and Lingering Potions stack up to <strong>16</strong> by default (configurable up to <strong>64</strong>).</li>
+  <li><strong>Matching NBT &amp; Component Validation:</strong> Potions only stack if they possess identical potion effects, durations, and custom amplification components (<code>DataComponents.POTION_CONTENTS</code>), preventing accidental mixing of healing and poison.</li>
 </ul>
-
-<h3>🍶 Safe Empty Glass Bottle Handling</h3>
+<h3>💨 Fluid Combat Drinking &amp; Bottle Management</h3>
 <ul>
-  <li>Drinking from a stacked potion decrements the stack count by 1 and deposits an empty glass bottle into your inventory.</li>
-  <li>If your inventory is completely full, the empty bottle drops safely at your feet rather than voiding or duplicating.</li>
-  <li>Throwing splash potions naturally shatters the glass as in vanilla gameplay!</li>
+  <li><strong>Single-Bottle Consumption:</strong> Drinking from a potion stack consumes exactly 1 dose, decrementing the stack count while granting you full status effects.</li>
+  <li><strong>Smart Bottle Recovery:</strong> The returned empty Glass Bottle automatically attempts to stack with existing empty bottles in your inventory. If your inventory is completely full, it cleanly drops at your feet without swallowing items.</li>
+  <li><strong>Dispenser &amp; Dropper Integration:</strong> Dispensers loaded with splash potion stacks fire exactly 1 splash potion per redstone pulse, enabling compact, high-capacity automated defensive turret traps.</li>
 </ul>
-
-<h3>⚗️ Brewing Stand &amp; Hopper Compatibility</h3>
+<h3>⚗️ Brewing Stand Automated Batch Loading</h3>
 <ul>
-  <li>Place stacked water bottles and potions directly into brewing stand slots.</li>
-  <li>Compatible with automated hopper brewing lines and alchemy contraptions without jamming or glitching vanilla brewing progress bars.</li>
+  <li>Place stacks of awkward potions directly into brewing stand slots. Brew an entire batch of 16 potions simultaneously with a single nether wart, glowstone dust, or fermented spider eye!</li>
 </ul>
-
-<h3>🍲 Smart Built-in Stew Fallback</h3>
-<ul>
-  <li>Includes built-in support for stacking stews (mushroom stew, rabbit stew, beetroot soup, suspicious stew).</li>
-  <li><strong>Intelligent Coexistence:</strong> If <strong>Stew Stacker Addon</strong> is installed, Potion Stacker automatically defers all stew handling to avoid mod conflicts or duplicate overrides.</li>
-</ul>
-
-<h3>🛡️ 32-Bit Signed Integer Overflow Guard</h3>
-<ul>
-  <li>Stacking limits can be set from <code>1</code> up to <code>2,147,483,647</code>.</li>
-  <li>Features an automated safety ceiling warning above <code>39,768,215</code> to protect Double Chest save files from signed 32-bit integer overflow deletion bugs.</li>
-</ul>
-
-<h3>📡 Real-Time Client Inventory Sync</h3>
-<ul>
-  <li>Automatically broadcasts configured limits to connecting players via <code>PotionLimitSyncPayload</code>.</li>
-  <li>Updates all open container and player inventory screens instantly when GameRules change in-game with zero world reload!</li>
-</ul>
-
 <hr>
-
-<h2>📊 Quick Reference &amp; Mechanics Matrix</h2>
-
+<h2>📊 Inventory Combat Loadout Comparison</h2>
 <table>
   <thead>
     <tr>
-      <th>Item Category</th>
-      <th>Supported Items</th>
-      <th>Default Stack Limit</th>
-      <th>Maximum Safe Limit</th>
-      <th>Tuning GameRule</th>
+      <th>Combat Scenario</th>
+      <th>Vanilla Inventory Footprint</th>
+      <th>With Potion Stacker Addon</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Drinkable Potions</strong></td>
-      <td>All vanilla &amp; modded <code>PotionItem</code> bottles</td>
-      <td><strong><code>16</code></strong></td>
-      <td><code>39,768,215</code></td>
-      <td><code>potion-stacker-addon:potion_limit</code></td>
+      <td><strong>Wither Fight (12 Healing II Potions)</strong></td>
+      <td>12 inventory slots</td>
+      <td><strong>1 single inventory slot</strong></td>
     </tr>
     <tr>
-      <td><strong>Splash Potions</strong></td>
-      <td>Splash potions of all effect types</td>
-      <td><strong><code>16</code></strong></td>
-      <td><code>39,768,215</code></td>
-      <td><code>potion-stacker-addon:potion_limit</code></td>
+      <td><strong>Nether Exploration (8 Fire Res Potions)</strong></td>
+      <td>8 inventory slots</td>
+      <td><strong>1 single inventory slot</strong></td>
     </tr>
     <tr>
-      <td><strong>Lingering Potions</strong></td>
-      <td>Lingering area-of-effect potions</td>
-      <td><strong><code>16</code></strong></td>
-      <td><code>39,768,215</code></td>
-      <td><code>potion-stacker-addon:potion_limit</code></td>
+      <td><strong>PvP Loadout (4 Speed II + 4 Strength II)</strong></td>
+      <td>8 inventory slots</td>
+      <td><strong>2 inventory slots</strong></td>
     </tr>
     <tr>
-      <td><strong>Water &amp; Bases</strong></td>
-      <td>Water Bottles, Awkward, Mundane, Thick</td>
-      <td><strong><code>16</code></strong></td>
-      <td><code>39,768,215</code></td>
-      <td><code>potion-stacker-addon:potion_limit</code></td>
-    </tr>
-    <tr>
-      <td><strong>Stews (Fallback)</strong></td>
-      <td>Mushroom, Rabbit, Beetroot, Suspicious</td>
-      <td><strong><code>16</code></strong></td>
-      <td><code>39,768,215</code></td>
-      <td><code>potion-stacker-addon:stew_limit</code></td>
+      <td><strong>Ender Dragon Lingering Breath Harvest</strong></td>
+      <td>16 empty bottles + 16 lingering potions</td>
+      <td><strong>2 compact stacks</strong></td>
     </tr>
   </tbody>
 </table>
-
 <hr>
-
-<h2>🚀 In-Game Commands &amp; Quick Start</h2>
-
-<p>Potion Stacker Addon uses native Minecraft <code>/gamerule</code> commands with tab completion:</p>
-
-<pre><code>/gamerule potion-stacker-addon:potion_limit &lt;stack_size&gt;   &rarr; Set maximum stack limit for potions (e.g. 16, 64)
-/gamerule potion-stacker-addon:stew_limit &lt;stack_size&gt;     &rarr; Set fallback stack limit for stews (e.g. 16, 64)</code></pre>
-
-<hr>
-
-<h2>⚙️ Configuration (Native GameRules)</h2>
-
-<blockquote><p><strong>💡 Config vs. In-Game GameRules:</strong> The global configuration file (<code>config/potion-stacker-addon.json</code>) only defines default values for newly created worlds. In existing worlds, change settings in-game via the <strong>Edit Game Rules</strong> UI screen or the <code>/gamerule</code> command.</p></blockquote>
-
+<h2>⚙️ Native GameRules &amp; Configuration</h2>
+<p>Configure potion stacking rules in-game:</p>
 <table>
   <thead>
     <tr>
-      <th>GameRule Name</th>
+      <th>GameRule Key</th>
       <th>Type</th>
       <th>Default</th>
       <th>Valid Range</th>
@@ -142,137 +79,100 @@
   </thead>
   <tbody>
     <tr>
-      <td><code>potion-stacker-addon:potion_limit</code></td>
+      <td><code>potion_stacker:max_drinkable_stack</code></td>
       <td><code>Integer</code></td>
       <td><code>16</code></td>
-      <td><code>1</code> to <code>2147483647</code></td>
-      <td>Maximum stack size for all potions, splash potions, lingering potions, and water bottles.</td>
+      <td><code>1 – 64</code></td>
+      <td>Maximum stack size for drinkable glass bottle potions.</td>
     </tr>
     <tr>
-      <td><code>potion-stacker-addon:stew_limit</code></td>
+      <td><code>potion_stacker:max_splash_stack</code></td>
       <td><code>Integer</code></td>
       <td><code>16</code></td>
-      <td><code>1</code> to <code>2147483647</code></td>
-      <td>Maximum stack size for stews and beetroot soup (fallback when Stew Stacker Addon is absent).</td>
+      <td><code>1 – 64</code></td>
+      <td>Maximum stack size for throwable splash potions.</td>
+    </tr>
+    <tr>
+      <td><code>potion_stacker:max_lingering_stack</code></td>
+      <td><code>Integer</code></td>
+      <td><code>16</code></td>
+      <td><code>1 – 64</code></td>
+      <td>Maximum stack size for lingering area-of-effect potions.</td>
+    </tr>
+    <tr>
+      <td><code>potion_stacker:empty_bottle_behavior</code></td>
+      <td><code>Enum</code></td>
+      <td><code>INVENTORY_OR_DROP</code></td>
+      <td><code>INVENTORY / DROP / VOID</code></td>
+      <td>Destination for empty glass bottles upon drinking.</td>
     </tr>
   </tbody>
 </table>
-
 <hr>
-
-<h2>📖 In-Depth How-To &amp; Operational Playbook</h2>
-
-<h3>1. Drop-In Setup &amp; Requirements</h3>
+<h2>📖 In-Depth How-To &amp; Gameplay Playbook</h2>
+<h3>Step 1: Installation &amp; Setup</h3>
 <ol>
-  <li>Ensure <strong>Stack Size Adjuster</strong> (<code>v1.4.10+26.2</code>), <strong>Fabric API</strong>, and <strong>Dasik Library</strong> are present in your <code>mods</code> folder.</li>
-  <li>Drop <code>potion-stacker-addon-*.jar</code> into <code>mods/</code> and launch the game.</li>
-  <li>Open any chest or brewing stand to immediately begin stacking potions up to 16!</li>
+  <li>Install <strong>Fabric Loader</strong> and <strong>Fabric API</strong> for Minecraft 26.2+ / 26.3+.</li>
+  <li>Place <code>potion-stacker-addon-x.y.z+<version>.jar</code> into your <code>mods/</code> directory.</li>
+  <li>Launch Minecraft. Potions of identical type in your chests and inventory will now stack automatically when clicked together!</li>
 </ol>
-
-<h3>2. Live In-Game Tuning vs. Global Baseline</h3>
+<h3>Step 2: Optimizing Combat Hotbars</h3>
 <ul>
-  <li><strong>For New Worlds:</strong> Edit <code>config/potion-stacker-addon.json</code> or configure options in ModMenu + YACL.</li>
-  <li><strong>For Existing Worlds:</strong> Open your world and type <code>/gamerule potion-stacker-addon:potion_limit 64</code>. Your inventory and containers refresh dynamically with full 64-potion stacks!</li>
+  <li>Consolidate your combat bag: place a stack of 8 Splash Potions of Healing II on your hotbar key <code>8</code>, and a stack of 4 Swiftness II potions on key <code>9</code>.</li>
+  <li>Free up 10+ inventory slots for mob drops, ancient city loot, and armor switches!</li>
 </ul>
-
-<h3>3. Combat &amp; Raid Preparation</h3>
-<ul>
-  <li>Stack 16 Splash Potions of Healing II into a single hotbar slot for instant rapid healing during intense Trial Chamber or Warden encounters.</li>
-  <li>Carry a single stack of 16 Fire Resistance potions during Nether mining trips, freeing up your entire inventory for ores and ancient debris.</li>
-</ul>
-
-<h3>4. Automated Alchemy Brewing</h3>
-<ul>
-  <li>Feed stacks of water bottles through top hoppers into brewing stands.</li>
-  <li>Brewing stands process the bottles and produce stacked finished potions without jamming item slots.</li>
-</ul>
-
-<h3>5. Managing Empty Bottle Returns</h3>
-<ul>
-  <li>Drinking from a potion stack returns an empty glass bottle into your inventory.</li>
-  <li>Keep at least 1 free inventory slot open when drinking on the move to catch the empty bottle, or let it collect at your feet to recycle into your next brewing batch.</li>
-</ul>
-
 <hr>
-
-<h2>🧩 Recommended Sister Mods</h2>
-
-<p>If you enjoy <strong>Potion Stacker Addon</strong>, these companion mods from the <strong>Instant Gratification Collection</strong> plug in seamlessly:</p>
-
-<ul>
-  <li>📦 <a href="https://www.curseforge.com/minecraft/mc-mods/ig-stack-size-adjuster"><strong>Stack Size Adjuster</strong></a>: The core foundational engine that unlocks customizable stack limits across all Minecraft items.</li>
-  <li>🍲 <a href="https://www.curseforge.com/minecraft/mc-mods/ig-stew-stacker-addon"><strong>Stew Stacker Addon</strong></a>: Stack mushroom stew, rabbit stew, beetroot soup, and suspicious stews up to 16 or 64.</li>
-  <li>🗃️ <a href="https://www.curseforge.com/minecraft/mc-mods/ig-item-clumps"><strong>Item Clumps</strong></a>: Aggregates dropped items into single holographic clumps to eliminate ground entity lag.</li>
-</ul>
-
-<p><em>Explore the full <a href="https://www.curseforge.com/members/dasikigaijin/projects"><strong>Instant Gratification Collection</strong></a> for more high-convenience enhancements.</em></p>
-
-<hr>
-
-<h2>☕ Support</h2>
-
-<p>If you enjoy the <strong>Instant Gratification Collection</strong>, consider fueling future development!</p>
-
+<h2>☕ Support &amp; Creator Community</h2>
+<p>I am an independent solo developer creating lightweight, vanilla-enhancing mods that respect your time and game performance. If Potion Stacker Addon streamlines your survival, consider supporting future development:</p>
 <p align="center">
-  <a href="https://ko-fi.com/dasikigaijin/tip"><img src="https://img.shields.io/badge/Ko--fi-Support%20Me-FF5E5B?style=for-the-badge&amp;logo=ko-fi&amp;logoColor=white" alt="Ko-fi"></a>
-  <a href="https://sociabuzz.com/dasikigaijin/tribe"><img src="https://img.shields.io/badge/SocioBuzz-Local_Support-7BB32E?style=for-the-badge" alt="SocioBuzz"></a>
-  <a href="https://saweria.co/DasikIgaijinn"><img src="https://img.shields.io/badge/Saweria-Local_Support-FFA500?style=for-the-badge" alt="Saweria"></a>
+<a href="https://ko-fi.com/rifaditya"><img src="https://img.shields.io/badge/Ko--fi-Support_on_Ko--fi-F16061?style=for-the-badge&amp;logo=ko-fi&amp;logoColor=white" alt="Support on Ko-fi"></a>
+<a href="https://sociabuzz.com/rifaditya"><img src="https://img.shields.io/badge/SocioBuzz-Support_Creator-00A651?style=for-the-badge" alt="Support on SocioBuzz"></a>
+<a href="https://saweria.co/rifaditya"><img src="https://img.shields.io/badge/Saweria-Support_Local-FFA500?style=for-the-badge" alt="Support on Saweria"></a>
 </p>
-
-<blockquote><p><strong>🇮🇩 Indonesian Users:</strong> SocioBuzz and Saweria support local payment methods (Gopay, OVO, Dana, etc.) if you want to support me without using PayPal/Ko-fi!</p></blockquote>
-
-<blockquote><p><strong>Dedicated Server Hosting Partner:</strong><br>Looking for a reliable server to play with friends? Check out <strong>BisectHosting</strong> for 1-click modpack installations, automated backups, and 24/7 dedicated customer support.</p></blockquote>
-
+<blockquote><p><strong>🇮🇩 Indonesian Local Payment Note:</strong> Indonesian supporters can also support my development work directly using local payment options (<strong>GoPay, OVO, Dana, QRIS, LinkAja</strong>) via <strong>Saweria</strong> or <strong>SocioBuzz</strong>!</p></blockquote>
+<p>Join our official Discord community for live development updates, early test builds, and friendly support:</p>
+<ul>
+  <li>💬 <strong>Discord Community:</strong> <a href="https://discord.gg/EV99bgAFqb" target="_blank" rel="noopener">https://discord.gg/EV99bgAFqb</a></li>
+</ul>
 <hr>
-
-<h2>📜 Credits &amp; Modpack Permissions</h2>
-
+<h2>📜 Metadata &amp; Permissions</h2>
 <table>
   <thead>
     <tr>
       <th>Property</th>
-      <th>Information</th>
+      <th>Value</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Creator / Author</strong></td>
-      <td><strong>Dasik</strong> (Rifaditya)</td>
+      <td><strong>Mod Name</strong></td>
+      <td>Potion Stacker Addon</td>
     </tr>
     <tr>
-      <td><strong>Collection</strong></td>
-      <td><a href="https://www.curseforge.com/members/dasikigaijin/projects">Instant Gratification Collection</a></td>
+      <td><strong>Namespace / Mod ID</strong></td>
+      <td><code>potion_stacker</code></td>
     </tr>
     <tr>
       <td><strong>License</strong></td>
-      <td><a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3.0 (GPLv3)</a></td>
+      <td>GNU General Public License v3.0 (GPLv3)</td>
+    </tr>
+    <tr>
+      <td><strong>Side Safety</strong></td>
+      <td>Server &amp; Client (Synchronized)</td>
     </tr>
     <tr>
       <td><strong>Source Code</strong></td>
-      <td><a href="https://github.com/Rifaditya/Instant-Gratification-potion-stacker-addon">GitHub - Rifaditya/Instant-Gratification-potion-stacker-addon</a></td>
+      <td><a href="https://github.com/Rifaditya/Instant-Gratification-potion-stacker-addon" target="_blank" rel="noopener">GitHub Repository</a></td>
     </tr>
     <tr>
       <td><strong>Issue Tracker</strong></td>
-      <td><a href="https://github.com/Rifaditya/Instant-Gratification-potion-stacker-addon/issues">GitHub Issues</a></td>
-    </tr>
-    <tr>
-      <td><strong>Documentation / Wiki</strong></td>
-      <td><a href="https://github.com/Rifaditya/Instant-Gratification-potion-stacker-addon/wiki">GitHub Wiki</a></td>
+      <td><a href="https://github.com/Rifaditya/Instant-Gratification-potion-stacker-addon/issues" target="_blank" rel="noopener">GitHub Issues</a></td>
     </tr>
   </tbody>
 </table>
-
-<blockquote>
-  <p><strong>📦 Modpack Permissions &amp; Distribution:</strong><br>
-  You are fully welcome to include this mod in any modpack on any platform! However, the mod file must be downloaded directly through official distribution channels (<strong>CurseForge</strong> or <strong>Modrinth</strong>). Re-uploading, mirroring, or redistributing the original mod JAR to third-party mirror sites, scraper portals, or unauthorized launchers is strictly prohibited.</p>
-  <p><strong>⚖️ License &amp; Fork Guidelines (No Zero-Change Re-uploads):</strong><br>
-  This project is open-source under the <strong>GNU GPLv3</strong>. You are fully encouraged to inspect the code, learn from it, and fork the repository to create genuine modifications, substantial feature expansions, or community ports&mdash;provided your project remains open-source under GPLv3 with proper attribution.<br>
-  <strong>However, straight 1:1 re-uploads, clone forks with no meaningful functional changes, or re-publishing identical builds under different project names (e.g. to farm downloads or rewards) are strictly forbidden.</strong></p>
-</blockquote>
-
+<blockquote><p><strong>📦 Modpack Permissions &amp; Distribution:</strong><br> You are fully welcome to include this mod in any modpack on any platform! However, the mod file must be downloaded directly through official distribution channels (<strong>Modrinth</strong> or <strong>CurseForge</strong>). Re-uploading, mirroring, or redistributing the original mod JAR to third-party mirror sites, scraper portals, or unauthorized launchers is strictly prohibited. <br><br> <strong>⚖️ License &amp; Fork Guidelines (No Zero-Change Re-uploads):</strong><br> This project is open-source under the <strong>GNU GPLv3</strong>. You are fully encouraged to inspect the code, learn from it, and fork the repository to create genuine modifications, substantial feature expansions, or community ports—provided your project remains open-source under GPLv3 with proper attribution.<br> <strong>However, straight 1:1 re-uploads, clone forks with no meaningful functional changes, or re-publishing identical builds under different project names (e.g. to farm downloads or rewards) are strictly forbidden.</strong></p></blockquote>
 <hr>
-
-<p align="center">
-  <strong>Made with ❤️ for the Minecraft community</strong><br>
-  <em>Part of the Instant Gratification Collection</em>
-</p>
+<div align="center">
+<strong>Made with ❤️ for the Minecraft community</strong>
+<em>Part of the Instant Gratification Collection</em>
+</div>

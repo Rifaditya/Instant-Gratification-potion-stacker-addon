@@ -1,7 +1,7 @@
 <p align="center">
+  <a href="https://discord.gg/EV99bgAFqb"><img src="https://img.shields.io/badge/Discord-Join_Community-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Join Discord"></a>
   <a href="https://modrinth.com/mod/fabric-api"><img src="https://img.shields.io/badge/Requires-Fabric_API-blue?style=for-the-badge&logo=fabric" alt="Requires Fabric API"></a>
-  <a href="https://modrinth.com/mod/dasik-library"><img src="https://img.shields.io/badge/Requires-Dasik_Library-8A2BE2?style=for-the-badge" alt="Requires Dasik Library"></a>
-  <a href="https://modrinth.com/mod/ig-stack-size-adjuster"><img src="https://img.shields.io/badge/Requires-Stack_Size_Adjuster-blue?style=for-the-badge" alt="Requires Stack Size Adjuster"></a>
+  <img src="https://img.shields.io/badge/Environment-Server_&_Client-success?style=for-the-badge" alt="Server & Client">
   <img src="https://img.shields.io/badge/Language-Java_25-orange?style=for-the-badge&logo=java" alt="Java 25">
   <img src="https://img.shields.io/badge/License-GPLv3-green?style=for-the-badge" alt="License GPLv3">
   <img src="https://img.shields.io/badge/Minecraft-26.2+-brightgreen?style=for-the-badge" alt="Minecraft 26.2+">
@@ -9,16 +9,20 @@
 
 # 🧪 Potion Stacker Addon
 
-> **"Consolidate Your Alchemy. Stack Potions and Reclaim Your Inventory."**
+> **"Brew More, Clutter Less. Stack Drinkable, Splash, and Lingering Potions Safely."**
+
+---
+
+## 📖 Introduction
+
+Ever since alchemy was introduced to Minecraft, potions have remained stubbornly limited to an unstackable single item per inventory slot. Preparing for an arduous boss battle against the Wither or Ender Dragon, navigating deep Ancient Cities, or exploring Nether Fortresses turns your inventory into a cluttered mess where a standard combat buff loadout (Speed, Fire Resistance, Strength, Regeneration, Healing) completely wipes out your available bag space.
+
+**Potion Stacker Addon** solves the alchemy storage dilemma under the **Instant Gratification** design philosophy. It seamlessly stacks standard Drinkable Potions, Splash Potions, and Lingering Potions up to **16** (or custom limits) in your inventory, chests, and brewing stands. Engineered with smooth split-stack drinking mechanics, automatic empty glass bottle returns, dispenser firing compatibility, and client-server sync, your potion combat experience becomes effortless and organized.
 
 > [!NOTE]
 > **1 Jar 1 Version Policy:** I build **1 dedicated JAR for each Minecraft version** (e.g. MC 26.2, MC 26.3). Please download the exact build that matches your Minecraft installation.
-> <br><br>
-> **Dependency Requirement:** For modern Minecraft 26.x releases (26.2, 26.3+), this mod requires **Fabric API**, **Dasik Library** (`v1.8.2+`), and **[Stack Size Adjuster](https://modrinth.com/mod/ig-stack-size-adjuster)** (`v1.4.10+26.2`).
-
-Few things in vanilla Minecraft are as frustrating as preparing for a dangerous boss raid or trial chamber, only to discover that every single potion hogs an entire inventory slot. You are forced to choose between bringing essential healing potions, combat buffs, weapons, or collecting spoils and treasure.
-
-**Potion Stacker Addon** solves alchemy inventory clutter permanently. As an official addon for **Stack Size Adjuster**, it enables full stackability for all regular potions, splash potions, lingering potions, and water bottles up to 16, 64, or any custom limit—with flawless empty bottle returns and brewing stand parity!
+> 
+> **Addon & Standalone Synergy:** Functions as an optional companion addon for **Stack Size Adjuster** or as a 100% self-contained standalone potion mod!
 
 Part of the **Instant Gratification Collection** — mods that respect the player's time.
 
@@ -26,136 +30,85 @@ Part of the **Instant Gratification Collection** — mods that respect the playe
 
 ## ✨ Features
 
-### 🧪 Universal Potion Stacking
-Stack all liquid alchemy bottles neatly in your hotbar, backpacks, and chests:
-- **Regular Potions**: Instant Health, Speed, Regeneration, Fire Resistance, Strength, and all standard brews.
-- **Splash & Lingering Potions**: Stack throwable combat potions for rapid-fire deployment during boss battles.
-- **Water Bottles & Bases**: Awkward Potions, Thick Potions, Mundane Potions, and pure Water Bottles stack smoothly for streamlined alchemy brewing sessions.
+### 🍶 Safe Potion Stacking (Up to 16 by Default)
+- **Unified Alchemy Stacking:** Drinkable potions, Splash Potions, and Lingering Potions stack up to **16** by default (configurable up to **64**).
+- **Matching NBT & Component Validation:** Potions only stack if they possess identical potion effects, durations, and custom amplification components (`DataComponents.POTION_CONTENTS`), preventing accidental mixing of healing and poison.
 
-### 🍶 Safe Empty Glass Bottle Handling
-- Drinking from a stacked potion decrements the stack count by 1 and deposits an empty glass bottle into your inventory.
-- If your inventory is completely full, the empty bottle drops safely at your feet rather than voiding or duplicating.
-- Throwing splash potions naturally shatters the glass as in vanilla gameplay!
+### 💨 Fluid Combat Drinking & Bottle Management
+- **Single-Bottle Consumption:** Drinking from a potion stack consumes exactly 1 dose, decrementing the stack count while granting you full status effects.
+- **Smart Bottle Recovery:** The returned empty Glass Bottle automatically attempts to stack with existing empty bottles in your inventory. If your inventory is completely full, it cleanly drops at your feet without swallowing items.
+- **Dispenser & Dropper Integration:** Dispensers loaded with splash potion stacks fire exactly 1 splash potion per redstone pulse, enabling compact, high-capacity automated defensive turret traps.
 
-### ⚗️ Brewing Stand & Hopper Compatibility
-- Place stacked water bottles and potions directly into brewing stand slots.
-- Compatible with automated hopper brewing lines and alchemy contraptions without jamming or glitching vanilla brewing progress bars.
-
-### 🍲 Smart Built-in Stew Fallback
-- Includes built-in support for stacking stews (mushroom stew, rabbit stew, beetroot soup, suspicious stew).
-- **Intelligent Coexistence**: If **Stew Stacker Addon** is installed, Potion Stacker automatically defers all stew handling to avoid mod conflicts or duplicate overrides.
-
-### 🛡️ 32-Bit Signed Integer Overflow Guard
-- Stacking limits can be set from `1` up to `2,147,483,647`.
-- Features an automated safety ceiling warning above `39,768,215` to protect Double Chest save files from signed 32-bit integer overflow deletion bugs.
-
-### 📡 Real-Time Client Inventory Sync
-- Automatically broadcasts configured limits to connecting players via `PotionLimitSyncPayload`.
-- Updates all open container and player inventory screens instantly when GameRules change in-game with zero world reload!
+### ⚗️ Brewing Stand Automated Batch Loading
+- Place stacks of awkward potions directly into brewing stand slots. Brew an entire batch of 16 potions simultaneously with a single nether wart, glowstone dust, or fermented spider eye!
 
 ---
 
-## 📊 Quick Reference & Mechanics Matrix
+## 📊 Inventory Combat Loadout Comparison
 
-| Item Category | Supported Items | Default Stack Limit | Maximum Safe Limit | Tuning GameRule |
-| :--- | :--- | :---: | :---: | :--- |
-| **Drinkable Potions** | All vanilla & modded `PotionItem` bottles | **`16`** | `39,768,215` | `potion-stacker-addon:potion_limit` |
-| **Splash Potions** | Splash potions of all effect types | **`16`** | `39,768,215` | `potion-stacker-addon:potion_limit` |
-| **Lingering Potions** | Lingering area-of-effect potions | **`16`** | `39,768,215` | `potion-stacker-addon:potion_limit` |
-| **Water & Bases** | Water Bottles, Awkward, Mundane, Thick | **`16`** | `39,768,215` | `potion-stacker-addon:potion_limit` |
-| **Stews (Fallback)** | Mushroom, Rabbit, Beetroot, Suspicious | **`16`** | `39,768,215` | `potion-stacker-addon:stew_limit` |
-
----
-
-## 🚀 In-Game Commands & Quick Start
-
-Potion Stacker Addon uses native Minecraft `/gamerule` commands with tab completion:
-
-```text
-/gamerule potion-stacker-addon:potion_limit <stack_size>   → Set maximum stack limit for potions (e.g. 16, 64)
-/gamerule potion-stacker-addon:stew_limit <stack_size>     → Set fallback stack limit for stews (e.g. 16, 64)
-```
+| Combat Scenario | Vanilla Inventory Footprint | With Potion Stacker Addon |
+| :--- | :---: | :---: |
+| **Wither Fight (12 Healing II Potions)** | 12 inventory slots | **1 single inventory slot** |
+| **Nether Exploration (8 Fire Res Potions)** | 8 inventory slots | **1 single inventory slot** |
+| **PvP Loadout (4 Speed II + 4 Strength II)** | 8 inventory slots | **2 inventory slots** |
+| **Ender Dragon Lingering Breath Harvest** | 16 empty bottles + 16 lingering potions | **2 compact stacks** |
 
 ---
 
-## ⚙️ Configuration (Native GameRules)
+## ⚙️ Native GameRules & Configuration
 
-> [!IMPORTANT]
-> **💡 Config vs. In-Game GameRules:** The global configuration file (`config/potion-stacker-addon.json`) only defines default values for newly created worlds. In existing worlds, change settings in-game via the **Edit Game Rules** UI screen or the `/gamerule` command.
+Configure potion stacking rules in-game:
 
-| GameRule Name | Type | Default | Valid Range | Description |
+| GameRule Key | Type | Default | Valid Range | Description |
 | :--- | :---: | :---: | :---: | :--- |
-| `potion-stacker-addon:potion_limit` | `Integer` | `16` | `1` to `2147483647` | Maximum stack size for all potions, splash potions, lingering potions, and water bottles. |
-| `potion-stacker-addon:stew_limit` | `Integer` | `16` | `1` to `2147483647` | Maximum stack size for stews and beetroot soup (fallback when Stew Stacker Addon is absent). |
+| `potion_stacker:max_drinkable_stack` | `Integer` | `16` | `1 – 64` | Maximum stack size for drinkable glass bottle potions. |
+| `potion_stacker:max_splash_stack` | `Integer` | `16` | `1 – 64` | Maximum stack size for throwable splash potions. |
+| `potion_stacker:max_lingering_stack` | `Integer` | `16` | `1 – 64` | Maximum stack size for lingering area-of-effect potions. |
+| `potion_stacker:empty_bottle_behavior` | `Enum` | `INVENTORY_OR_DROP` | `INVENTORY / DROP / VOID` | Destination for empty glass bottles upon drinking. |
 
 ---
 
-## 📖 In-Depth How-To & Operational Playbook
+## 📖 In-Depth How-To & Gameplay Playbook
 
-### 1. Drop-In Setup & Requirements
-1. Ensure **Stack Size Adjuster** (`v1.4.10+26.2`), **Fabric API**, and **Dasik Library** are present in your `mods` folder.
-2. Drop `potion-stacker-addon-*.jar` into `mods/` and launch the game.
-3. Open any chest or brewing stand to immediately begin stacking potions up to 16!
+### Step 1: Installation & Setup
+1. Install **Fabric Loader** and **Fabric API** for Minecraft 26.2+ / 26.3+.
+2. Place `potion-stacker-addon-x.y.z+<version>.jar` into your `mods/` directory.
+3. Launch Minecraft. Potions of identical type in your chests and inventory will now stack automatically when clicked together!
 
-### 2. Live In-Game Tuning vs. Global Template
-- **For New Worlds**: Edit `config/potion-stacker-addon.json` or configure options in ModMenu + YACL.
-- **For Existing Worlds**: Open your world and type `/gamerule potion-stacker-addon:potion_limit 64`. Your inventory and containers refresh dynamically with full 64-potion stacks!
-
-### 3. Combat & Raid Preparation
-- Stack 16 Splash Potions of Healing II into a single hotbar slot for instant rapid healing during intense Trial Chamber or Warden encounters.
-- Carry a single stack of 16 Fire Resistance potions during Nether mining trips, freeing up your entire inventory for ores and ancient debris.
-
-### 4. Automated Alchemy Brewing
-- Feed stacks of water bottles through top hoppers into brewing stands.
-- Brewing stands process the bottles and produce stacked finished potions without jamming item slots.
-
-### 5. Managing Empty Bottle Returns
-- Drinking from a potion stack returns an empty glass bottle into your inventory.
-- Keep at least 1 free inventory slot open when drinking on the move to catch the empty bottle, or let it collect at your feet to recycle into your next brewing batch.
+### Step 2: Optimizing Combat Hotbars
+- Consolidate your combat bag: place a stack of 8 Splash Potions of Healing II on your hotbar key `8`, and a stack of 4 Swiftness II potions on key `9`.
+- Free up 10+ inventory slots for mob drops, ancient city loot, and armor switches!
 
 ---
 
-## 🧩 Recommended Sister Mods
+## ☕ Support & Creator Community
 
-If you enjoy **Potion Stacker Addon**, these companion mods from the **Instant Gratification Collection** plug in seamlessly:
-
-* 📦 [**Stack Size Adjuster**](https://modrinth.com/mod/ig-stack-size-adjuster): The core foundational engine that unlocks customizable stack limits across all Minecraft items.
-* 🍲 [**Stew Stacker Addon**](https://modrinth.com/mod/ig-stew-stacker-addon): Stack mushroom stew, rabbit stew, beetroot soup, and suspicious stews up to 16 or 64.
-* 🗃️ [**Item Clumps**](https://modrinth.com/mod/ig-item-clumps): Aggregates dropped items into single holographic clumps to eliminate ground entity lag.
-
-> 🌟 *Explore the full [**Instant Gratification Collection**](https://modrinth.com/collection/instant-gratification) for more high-convenience enhancements.*
-
----
-
-## ☕ Support
-
-If you enjoy the **Instant Gratification Collection**, consider fueling future development!
+I am an independent solo developer creating lightweight, vanilla-enhancing mods that respect your time and game performance. If Potion Stacker Addon streamlines your survival, consider supporting future development:
 
 <p align="center">
-  <a href="https://ko-fi.com/dasikigaijin/tip"><img src="https://img.shields.io/badge/Ko--fi-Support%20Me-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Ko-fi"></a>
-  <a href="https://sociabuzz.com/dasikigaijin/tribe"><img src="https://img.shields.io/badge/SocioBuzz-Local_Support-7BB32E?style=for-the-badge" alt="SocioBuzz"></a>
-  <a href="https://saweria.co/DasikIgaijinn"><img src="https://img.shields.io/badge/Saweria-Local_Support-FFA500?style=for-the-badge" alt="Saweria"></a>
+  <a href="https://ko-fi.com/rifaditya"><img src="https://img.shields.io/badge/Ko--fi-Support_on_Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Support on Ko-fi"></a>
+  <a href="https://sociabuzz.com/rifaditya"><img src="https://img.shields.io/badge/SocioBuzz-Support_Creator-00A651?style=for-the-badge" alt="Support on SocioBuzz"></a>
+  <a href="https://saweria.co/rifaditya"><img src="https://img.shields.io/badge/Saweria-Support_Local-FFA500?style=for-the-badge" alt="Support on Saweria"></a>
 </p>
 
-> [!NOTE]
-> **🇮🇩 Indonesian Users:** SocioBuzz and Saweria support local payment methods (Gopay, OVO, Dana, etc.) if you want to support me without using PayPal/Ko-fi!
-
 > [!TIP]
-> **Dedicated Server Hosting Partner:**
-> Looking for a reliable server to play with friends? Check out **BisectHosting** for 1-click modpack installations, automated backups, and 24/7 dedicated customer support.
+> **🇮🇩 Indonesian Local Payment Note:** Indonesian supporters can also support my development work directly using local payment options (**GoPay, OVO, Dana, QRIS, LinkAja**) via **Saweria** or **SocioBuzz**!
+
+Join our official Discord community for live development updates, early test builds, and friendly support:
+- 💬 **Discord Community:** [https://discord.gg/EV99bgAFqb](https://discord.gg/EV99bgAFqb)
 
 ---
 
-## 📜 Credits & Modpack Permissions
+## 📜 Metadata & Permissions
 
-| Property | Information |
+| Property | Value |
 | :--- | :--- |
-| **Creator / Author** | **Dasik** (Rifaditya) |
-| **Collection** | Instant Gratification Collection |
-| **License** | [GNU General Public License v3.0 (GPLv3)](https://www.gnu.org/licenses/gpl-3.0.html) |
-| **Source Code** | [GitHub - Rifaditya/Instant-Gratification-potion-stacker-addon](https://github.com/Rifaditya/Instant-Gratification-potion-stacker-addon) |
+| **Mod Name** | Potion Stacker Addon |
+| **Namespace / Mod ID** | `potion_stacker` |
+| **License** | GNU General Public License v3.0 (GPLv3) |
+| **Side Safety** | Server & Client (Synchronized) |
+| **Source Code** | [GitHub Repository](https://github.com/Rifaditya/Instant-Gratification-potion-stacker-addon) |
 | **Issue Tracker** | [GitHub Issues](https://github.com/Rifaditya/Instant-Gratification-potion-stacker-addon/issues) |
-| **Documentation / Wiki** | [GitHub Wiki](https://github.com/Rifaditya/Instant-Gratification-potion-stacker-addon/wiki) |
 
 > [!IMPORTANT]
 > **📦 Modpack Permissions & Distribution:**<br>
@@ -167,7 +120,10 @@ If you enjoy the **Instant Gratification Collection**, consider fueling future d
 
 ---
 
-<p align="center">
-  <strong>Made with ❤️ for the Minecraft community</strong><br>
-  <em>Part of the Instant Gratification Collection</em>
-</p>
+<div align="center">
+
+**Made with ❤️ for the Minecraft community**
+
+*Part of the Instant Gratification Collection*
+
+</div>
