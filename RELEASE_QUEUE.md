@@ -5,7 +5,7 @@ Open this file in your editor and change `[ ]` to `[x]` when you publish a versi
 
 ## 🚀 Published & Backlog Queue
 
-- [ ] **`1.1.3+26.3`** (2026-09-14) - Initial Minecraft 26.3 Release. - Ported Potion Stacker Addon to Minecraft 26.3 snapshot-6, targeting Fabric Loader 0.19.3, Fabric API 0.156.1+26.3, and DasikLibrary 1.8.39.
+- [x] **`1.1.3+26.3`** (2026-09-14) - Initial Minecraft 26.3 Release. - Ported Potion Stacker Addon to Minecraft 26.3 snapshot-6, targeting Fabric Loader 0.19.3, Fabric API 0.156.1+26.3, and DasikLibrary 1.8.39.
 - [x] **`1.1.3+26.2`** (2026-08-10) - CustomStackSizeOverride Registration. - Explicit registration with CustomStackSizeOverride to prevent legacy BiFunction fallback issues.
 - [x] **`1.1.2+26.2`** (SUPERSEDED) (2026-08-10) - Multi-Addon Deferral Fix. - Added check to defer stew handling to Stew Stacker Addon when co-installed.
 - [x] **`1.1.1+26.2`** (2026-07-22) - - Icon Optimization & Dependency Bounds. - - Compressed icon asset, aligned dasik-library to open-ended `>=1.8.3` bound.
