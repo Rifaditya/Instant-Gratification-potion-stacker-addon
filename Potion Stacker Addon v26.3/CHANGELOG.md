@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4+26.3] - 2026-10-18
+
+### Changed
+- **Centralized Universal Configuration Screen**: Migrated ModMenu config screen to `UniversalConfigScreen` (`net.dasik.social.api.client.gui.UniversalConfigScreen`).
+- **ConfigOption Annotations**: Replaced custom `YaclScreenHelper` with `@ConfigOption` annotations on `potionLimit` and `stewLimit`, eliminating ~154 lines of boilerplate and ensuring Knot ClassLoader side-safety.
+- **Automated Creator Support Touchpoints**: Injected automated Ko-fi and Discord buttons directly into the config GUI.
+
 ## [1.1.3+26.3] - 2026-09-14
 
 ### Added

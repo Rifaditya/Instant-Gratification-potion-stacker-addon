@@ -4,15 +4,11 @@ package net.instantgratification.potionstacker.config;
 // Verified against: ModMenuIntegration.java (26.2+)
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
-import net.dasik.social.api.config.GuiHelper;
+import net.dasik.social.api.client.gui.UniversalConfigScreen;
 
 public class ModMenuIntegration implements ModMenuApi {
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        return GuiHelper.getOptionalYaclFactory(
-            "potion-stacker-addon",
-            "net.instantgratification.potionstacker.config.YaclScreenHelper",
-            "createScreen"
-        );
+        return UniversalConfigScreen.createFactory("potion-stacker-addon", PotionStackerConfig.get(), PotionStackerConfig::save);
     }
 }

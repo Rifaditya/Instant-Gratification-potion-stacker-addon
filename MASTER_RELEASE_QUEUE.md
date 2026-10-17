@@ -9,8 +9,8 @@
 
 | Target MC | Generational Era | Live on Platforms | Next Queued Version | Status & Cadence Action | Feature Highlights / Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **MC 26.3** | Modern Lead | `1.1.3+26.3` | `(Up to date)` | 🟢 **Up to Date** | Snapshot-6 port targeting Fabric Loader 0.19.3. |
-| **MC 26.2** | Modern Predecessor | `1.1.3+26.2` | `(Up to date)` | 🟢 **Up to Date** | Explicit CustomStackSizeOverride registration. |
+| **MC 26.3** | Modern Lead | `1.1.3+26.3` | `1.1.4+26.3` | 🟡 **Queued** | UniversalConfigScreen migration and @ConfigOption annotations. |
+| **MC 26.2** | Modern Predecessor | `1.1.3+26.2` | `1.1.4+26.2` | 🟡 **Queued** | UniversalConfigScreen migration and @ConfigOption annotations. |
 
 ---
 
