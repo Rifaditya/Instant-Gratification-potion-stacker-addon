@@ -4,7 +4,7 @@
 - **Category**: `[FEATURE]`
 - **Priority**: `[HIGH]`
 - **Scope**: `All Anchors` (`1.20.1`, `1.21.1`, `1.21.11`, `26.1`, `26.2`, `26.3`)
-- **Status**: `📌 DEFERRED`
+- **Status**: `✅ RESOLVED`
 - **Target Repository / Root**: `Instant Gratification Collection/Potion Stacker Addon`
 
 ---
@@ -59,9 +59,9 @@ In-game behavior before vs. after:
 6. Register queued version in `RELEASE_QUEUE.md` (`- [ ]`) and `CHANGELOG.md`.
 
 ## 🏁 6. 5-Pillar Verification Checklist
-- [ ] **Pillar 1 (Chaos Fuzzing)**: Chaos property fuzzing passes 10k-50k iterations.
-- [ ] **Pillar 2 (Concurrency Load)**: Multi-threaded state stress test across 50 virtual threads.
-- [ ] **Pillar 3 (Brigadier AST)**: Brigadier command tree AST and permissions validated headlessly.
-- [ ] **Pillar 4 (GameTest)**: In-engine headless assertions pass cleanly.
-- [ ] **Pillar 5 (Sidedness & Hygiene)**: Sidedness contract asserts 0 client imports in common code; single-line GPLv3 headers.
-- [ ] **Anchor Compilation**: Clean `./gradlew test build` across all 6 anchors (`1.20.1`, `1.21.1`, `1.21.11`, `26.1.2`, `26.2`, `26.3`).
+- [x] **Pillar 1 (Chaos Fuzzing)**: Chaos property fuzzing passes 10k-50k iterations.
+- [x] **Pillar 2 (Concurrency Load)**: Multi-threaded state stress test across 50 virtual threads.
+- [x] **Pillar 3 (Brigadier AST)**: Brigadier command tree AST and permissions validated headlessly.
+- [x] **Pillar 4 (GameTest)**: In-engine headless assertions pass cleanly.
+- [x] **Pillar 5 (Sidedness & Hygiene)**: Sidedness contract asserts 0 client imports in common code; single-line GPLv3 headers.
+- [x] **Anchor Compilation**: Clean `./gradlew test build` across all 6 anchors (`1.20.1`, `1.21.1`, `1.21.11`, `26.1.2`, `26.2`, `26.3`).
