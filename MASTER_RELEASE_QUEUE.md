@@ -13,6 +13,7 @@
 | **MC 26.2** | Modern Predecessor | `1.1.3+26.2` | `1.1.4+26.2` | 🟡 **Queued** | UniversalConfigScreen migration and @ConfigOption annotations. |
 | **MC 26.1.2** | Modern Sovereign | `—` | `1.0.0+26.1.2` | 🟡 **Queued** | Initial release for Minecraft 26.1.2. |
 | **MC 1.21.11** | Modern LTS Anchor | `—` | `1.0.0+1.21.11` | 🟡 **Queued** | Initial release for Minecraft 1.21.11. |
+| **MC 1.21.1** | Prime LTS Generational Anchor | `—` | `1.0.0+1.21.1` | 🟡 **Queued** | Initial release for Minecraft 1.21.1. |
 
 ---
 
