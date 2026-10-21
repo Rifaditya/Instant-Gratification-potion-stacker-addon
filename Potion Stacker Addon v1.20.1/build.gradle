@@ -1,0 +1,168 @@
+plugins {
+    id 'fabric-loom' version '1.10.2'
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url = "https://maven.fabricmc.net/" }
+    maven { url = "https://maven.terraformersmc.com/releases/" }
+    flatDir {
+        dirs 'E:/Minecraft Project/Instant Gratification Collection/Stack Size Adjuster/Archive Jar of all versions/MC 1.20.1',
+             'E:/Minecraft Project/Dasik Library v1.20.1/Archive Jar of all versions/MC 1.20.1'
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings loom.officialMojangMappings()
+
+    modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    modImplementation "net.dasik.social:dasik-library:${project.dasik_library_version}"
+    modImplementation "net.instantgratification:stack-size-adjuster:1.0.1+1.20.1"
+
+    modCompileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
+    testImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
+
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.10.0"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.10.0"
+    testRuntimeOnly "org.junit.platform:junit-platform-launcher:1.10.0"
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.encoding = "UTF-8"
+    it.options.release = 17
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "loader_version", project.fabric_loader_version
+    inputs.property "minecraft_version", project.minecraft_version
+    inputs.property "minecraft_dependency", project.minecraft_dependency
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version,
+               "loader_version": project.fabric_loader_version,
+               "minecraft_version": project.minecraft_version,
+               "minecraft_dependency": project.minecraft_dependency
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    from("LICENSE") {
+        rename { "${it}_${project.archives_base_name}" }
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+afterEvaluate {
+    def targetJarTask = tasks.findByName('remapJar') ?: tasks.findByName('jar')
+    if (targetJarTask != null) {
+        def archiveTask = tasks.register('archiveReleaseJar') {
+            group = 'build'
+            description = 'Copies release JAR to all 4 deployment locations'
+            dependsOn targetJarTask
+            doLast {
+                def jarFile = targetJarTask.archiveFile.get().asFile
+                if (jarFile.exists()) {
+                    // Point 1: Mod Local Archive (Archive/builds & MC archive)
+                    def localArchiveDir = file("Archive/builds")
+                    localArchiveDir.mkdirs()
+                    copy {
+                        from jarFile
+                        into localArchiveDir
+                    }
+                    def mcVer = project.findProperty('minecraft_version') ?: '1.20.1'
+                    def rootArchive = file("../Archive Jar of all versions/MC ${mcVer}")
+                    if (rootArchive.exists() || rootArchive.parentFile?.exists()) {
+                        rootArchive.mkdirs()
+                        copy {
+                            from jarFile
+                            into rootArchive
+                        }
+                    }
+                    println "[DEPLOY-POINT-1] Copied ${jarFile.name} to local Archive: ${localArchiveDir.canonicalPath}"
+
+                    // Point 2: Central Release Hub Archives
+                    File hubCandidate = projectDir
+                    File hubDir = null
+                    while (hubCandidate != null) {
+                        File checkDir = new File(hubCandidate, "minecraft-mod-release-hub")
+                        if (checkDir.exists()) {
+                            hubDir = checkDir
+                            break
+                        }
+                        hubCandidate = hubCandidate.parentFile
+                    }
+                    if (hubDir == null) {
+                        File fallback = new File("E:/Minecraft Project/minecraft-mod-release-hub")
+                        if (fallback.exists()) hubDir = fallback
+                    }
+                    if (hubDir != null && hubDir.exists()) {
+                        File targetHubDir = new File(hubDir, "archives/Potion Stacker Addon")
+                        targetHubDir.mkdirs()
+                        copy {
+                            from jarFile
+                            into targetHubDir
+                        }
+                        println "[DEPLOY-POINT-2] Copied ${jarFile.name} to release hub: ${targetHubDir.canonicalPath}"
+                    }
+
+                    // Point 3: External Vault Archive
+                    File vaultDir = new File("D:/Minecraft Mod Archive Jars/Potion Stacker Addon")
+                    if (vaultDir.exists() || vaultDir.parentFile?.exists()) {
+                        vaultDir.mkdirs()
+                        copy {
+                            from jarFile
+                            into vaultDir
+                        }
+                        println "[DEPLOY-POINT-3] Copied ${jarFile.name} to external vault: ${vaultDir.canonicalPath}"
+                    }
+
+                    // Point 4: Modrinth App Profile mods directory
+                    File profileDir = new File("C:/Users/fmrif/AppData/Roaming/ModrinthApp/profiles/Fabric 1.20.1/mods")
+                    if (profileDir.exists()) {
+                        profileDir.listFiles().each { file ->
+                            if (file.name.startsWith(project.archives_base_name) && file.name.endsWith(".jar") && !file.name.equals(jarFile.name)) {
+                                file.delete()
+                                println "[DEPLOY-POINT-4] Purged old version from test profile: ${file.name}"
+                            }
+                        }
+                        copy {
+                            from jarFile
+                            into profileDir
+                        }
+                        println "[DEPLOY-POINT-4] Deployed ${jarFile.name} to test profile: ${profileDir.canonicalPath}"
+                    }
+                }
+            }
+        }
+        build.finalizedBy(archiveTask)
+    }
+}
