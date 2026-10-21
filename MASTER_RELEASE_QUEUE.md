@@ -11,6 +11,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **MC 26.3** | Modern Lead | `1.1.3+26.3` | `1.1.4+26.3` | 🟡 **Queued** | UniversalConfigScreen migration and @ConfigOption annotations. |
 | **MC 26.2** | Modern Predecessor | `1.1.3+26.2` | `1.1.4+26.2` | 🟡 **Queued** | UniversalConfigScreen migration and @ConfigOption annotations. |
+| **MC 26.1.2** | Modern Sovereign | `—` | `1.0.0+26.1.2` | 🟡 **Queued** | Initial release for Minecraft 26.1.2. |
 
 ---
 
