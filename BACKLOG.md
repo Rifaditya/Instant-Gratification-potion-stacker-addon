@@ -1,7 +1,7 @@
 # 📌 Potion Stacker Addon Backlog
 
-<!-- Highest Historical ID: BL-PSA-004 (Next Ticket Must Start at BL-PSA-005) -->
-> **Next Available Ticket ID**: `[BL-PSA-005]`
+<!-- Highest Historical ID: BL-PSA-005 (Next Ticket Must Start at BL-PSA-006) -->
+> **Next Available Ticket ID**: `[BL-PSA-006]`
 
 This file tracks planned features, technical refinements, performance optimizations, and deferred improvements for **Potion Stacker Addon**.
 
@@ -11,7 +11,7 @@ This file tracks planned features, technical refinements, performance optimizati
 
 | ID | Category | Title | Priority | Target Version | Status | Specification |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| - | - | *No active backlog items* | - | - | - | - |
+| [`BL-PSA-005`](tickets/BL-PSA-005.md) | `[GOVERNANCE]` | Storefront Reconciliation: Align Mod Pages with Current Public Release | `[HIGH]` | `Platform Pages` | `📌 DEFERRED` | [View Ticket](tickets/BL-PSA-005.md) |
 
 *(All previous items have been resolved and documented in CHANGELOG.md and History.md. New items will be queued here.)*
 
