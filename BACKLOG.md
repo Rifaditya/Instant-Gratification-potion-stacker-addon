@@ -1,7 +1,7 @@
 # 📌 Potion Stacker Addon Backlog
 
-<!-- Highest Historical ID: BL-PSA-005 (Next Ticket Must Start at BL-PSA-006) -->
-> **Next Available Ticket ID**: `[BL-PSA-006]`
+<!-- Highest Historical ID: BL-PSA-007 (Next Ticket Must Start at BL-PSA-008) -->
+> **Next Available Ticket ID**: `[BL-PSA-008]`
 
 This file tracks planned features, technical refinements, performance optimizations, and deferred improvements for **Potion Stacker Addon**.
 
@@ -11,7 +11,9 @@ This file tracks planned features, technical refinements, performance optimizati
 
 | ID | Category | Title | Priority | Target Version | Status | Specification |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| [`BL-PSA-006`](tickets/BL-PSA-006.md) | `[TECH_DEBT]` | Scaffold Anchor 7: Potion Stacker Addon v26.x (rolling 26.3+) | `[MEDIUM]` | Multi-Version Parity | `📌 DEFERRED` | [View Ticket](tickets/BL-PSA-006.md) |
 | [`BL-PSA-005`](tickets/BL-PSA-005.md) | `[GOVERNANCE]` | Storefront Reconciliation: Align Mod Pages with Current Public Release | `[HIGH]` | `Platform Pages` | `📌 DEFERRED` | [View Ticket](tickets/BL-PSA-005.md) |
+| [`BL-PSA-007`](tickets/BL-PSA-007.md) | `[TECH_DEBT]` | Wiki Audit & Update to Latest Version: Potion Stacker Addon | `[MEDIUM]` | `All Anchors` | `📌 DEFERRED` | [View Ticket](tickets/BL-PSA-007.md) |
 
 *(All previous items have been resolved and documented in CHANGELOG.md and History.md. New items will be queued here.)*
 

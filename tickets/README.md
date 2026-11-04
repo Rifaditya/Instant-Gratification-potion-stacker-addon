@@ -1,7 +1,7 @@
 # 🎫 Potion Stacker Addon Tickets & Modular Backlog
 
-<!-- Highest Historical ID: BL-PSA-005 (Next Ticket Must Start at BL-PSA-006) -->
-> **Next Available Ticket ID**: `[BL-PSA-006]`
+<!-- Highest Historical ID: BL-PSA-007 (Next Ticket Must Start at BL-PSA-008) -->
+> **Next Available Ticket ID**: `[BL-PSA-008]`
 
 This directory houses dedicated atomic ticket specifications for **Potion Stacker Addon**.
 
@@ -12,3 +12,4 @@ This directory houses dedicated atomic ticket specifications for **Potion Stacke
 | `[BL-PSA-003]` | `[TECH_DEBT]` | Adopt 5-Pillar Testing & Sidedness Verification Harness | `✅ RESOLVED` | [BL-PSA-003.md](BL-PSA-003.md) |
 | `[BL-PSA-004]` | `[TECH_DEBT]` | Migrate Client Configuration GUI to UniversalConfigScreen | `✅ RESOLVED` | [BL-PSA-004.md](BL-PSA-004.md) |
 | `[BL-PSA-005]` | `[GOVERNANCE]` | Storefront Reconciliation: Align Mod Pages with Current Public Release | `📌 DEFERRED` | [BL-PSA-005.md](BL-PSA-005.md) |
+| `[BL-PSA-007]` | `[TECH_DEBT]` | Wiki Audit & Update to Latest Version: Potion Stacker Addon | `📌 DEFERRED` | [BL-PSA-007.md](BL-PSA-007.md) |
